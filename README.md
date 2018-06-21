@@ -5,7 +5,7 @@
 
 ## Features
 
-- Pheonix Framework v1.3.3
+- Phoenix Framework v1.3.3
 - Webpack 4
 - Vue + VueRouter + Vuex + VueI18n + ESlint
 - Pages with dynamic import and custom layouts
@@ -17,8 +17,8 @@
 Important: npm some bug and cant run webpack 4 please use yarn
 
 ```bash
-cd phoenix-vue-spa
 # Install Phoenix requirement package
+cd phoenix-vue-spa
 mix deps.get
 
 # Buil Phoenix
@@ -26,7 +26,6 @@ mix deps.compile
 
 # Install SPA requirement package
 cd assets
-
 yarn
 
 ```
