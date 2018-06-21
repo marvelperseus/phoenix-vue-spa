@@ -9,7 +9,7 @@
 - Vue + VueRouter + Vuex + VueI18n + ESlint
 - Pages with dynamic import and custom layouts
 - Login, register and password reset
-- Authentication with JWT
+- Authentication with ueberauth/guardian JWT
 - Bootstrap 4 + Font Awesome 5
 
 ## Installation
