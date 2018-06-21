@@ -1,7 +1,7 @@
-# Pheonix-Vue SPA 
+# Phoenix-Vue SPA 
 
 
-> A Pheonix-Vue SPA starter project template In Build Watch mechanism.
+> A Phoenix-Vue SPA starter project template In Build Watch mechanism.
 
 ## Features
 
@@ -16,15 +16,31 @@
 ## Installation
 Important: npm some bug and cant run webpack 4 please use yarn
 
--  cd assets
-- `yarn`
+```bash
+cd phoenix-vue-spa
+# Install Phoenix requirement package
+mix deps.get
 
+# Buil Phoenix
+mix deps.compile
+
+# Install SPA requirement package
+cd assets
+
+yarn
+
+```
 ## Usage
 
 #### Development
 
 ```bash
-# start dev server phoenix and config/dev.exs little helper watchers can run watch command yarn
+# first run yarn watch command and let yarn build vuejs package
+cd assets
+yarn watch
+
+# after run Phoenix development server
+cd ..
 mix phx.server
 
 ```
@@ -33,7 +49,7 @@ mix phx.server
 
 ```bash
 cd assets
-npm run production
+yarn production
 ```
 
 #### Inspired By cretueusebiu/laravel-vue-spa
