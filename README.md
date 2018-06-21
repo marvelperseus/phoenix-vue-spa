@@ -31,7 +31,7 @@ yarn
 ```
 ## Usage
 
-#### Development
+### Development
 
 ```bash
 # first run yarn watch command and let yarn build vuejs package
@@ -44,9 +44,9 @@ mix phx.server
 
 ```
 
-#### Production
+### Production
 
-### Config your secret and db connection for production
+#### Config your secret and db connection for production
 ```bash
 use Mix.Config
 
@@ -68,7 +68,7 @@ config :foo, Foo.Repo,
   database: "foo_prod",
   size: 20 # The amount of database connections in the pool
 ```
-### Config your env and assets for production
+#### Config your env and assets for production
 ```bash
 $ mix deps.get --only prod
 $ MIX_ENV=prod mix compile
