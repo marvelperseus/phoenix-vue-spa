@@ -46,9 +46,45 @@ mix phx.server
 
 #### Production
 
+### Config your secret and db connection for production
 ```bash
-cd assets
-yarn production
+use Mix.Config
+
+# In this file, we keep production configuration that
+# you likely want to automate and keep it away from
+# your version control system.
+
+# You can generate a new secret by running:
+#
+#     mix phx.gen.secret
+config :foo, Foo.Endpoint,
+  secret_key_base: "A LONG SECRET"
+
+# Configure your database
+config :foo, Foo.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "foo_prod",
+  size: 20 # The amount of database connections in the pool
+```
+### Config your env and assets for production
+```bash
+$ mix deps.get --only prod
+$ MIX_ENV=prod mix compile
+
+# Compile assets
+$ cd assets
+$ yarn production
+
+$ mix phx.digest
+
+# Custom tasks (like DB migrations)
+$ MIX_ENV=prod mix ecto.migrate
+
+# Finally run the server
+$ PORT=4001 MIX_ENV=prod mix phx.server
+
 ```
 
 #### Inspired By cretueusebiu/laravel-vue-spa
